@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import existing Dwangwa styles */
+@import 'style.css';
+
+/* Add Tailwind override classes */
+.tw-button {
+  @apply px-4 py-2 bg-gradient-to-r from-[#ecb540] to-[#ec8940] rounded-full text-[#86450c] shadow;
+}
+
+.tw-header {
+  @apply bg-[#4a3173] text-white;
+}
+
+.tw-nav {
+  @apply flex items-center justify-between;
+}
