@@ -28,30 +28,38 @@ const SiteHeader = () => (
           <h1 className="ml-4 text-2xl font-bold">DWANGWA CCAP</h1>
         </div>
         <div className="main-navigation">
-          <ul className="menu flex space-x-4">
-            <li className="menu-item">
-              <a href="/about" className="hover:underline">About us</a>
-            </li>
-            <li className="menu-item">
-              <a href="/pastors" className="hover:underline">Pastors</a>
-            </li>
-            <li className="menu-item">
-              <a href="/events" className="hover:underline">Events</a>
-            </li>
-            <li className="menu-item">
-              <a href="/payments" className="hover:underline">Make Offering</a>
-            </li>
-            <li className="menu-item">
-              <a href="/join" className="hover:underline">Join Us</a>
-            </li>
-            <li className="menu-item">
-              <a href="#contact" className="hover:underline">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  {/* Mobile Menu Button */}
+  <div className="md:hidden flex justify-end p-4">
+    <button id="menu-btn" className="text-gray-800">
+      ☰
+    </button>
   </div>
+
+  {/* Desktop & Mobile Menu */}
+  <ul className="menu hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 p-4 md:p-0 bg-white md:bg-transparent">
+    <li className="menu-item">
+      <a href="/about" className="hover:underline">About us</a>
+    </li>
+    <li className="menu-item">
+      <a href="/pastors" className="hover:underline">Pastors</a>
+    </li>
+    <li className="menu-item">
+      <a href="/events" className="hover:underline">Events</a>
+    </li>
+    <li className="menu-item">
+      <a href="/payments" className="hover:underline">Make Offering</a>
+    </li>
+    <li className="menu-item">
+      <a href="/join" className="hover:underline">Join Us</a>
+    </li>
+    <li className="menu-item">
+      <a href="#contact" className="hover:underline">Contact</a>
+    </li>
+  </ul>
+</div>
+    </div>
+    </div>
+    </div>
 );
 
 // Transition area component
@@ -77,11 +85,11 @@ const Hero = () => {
       link: "#",
     },
     {
-      title: "Women Annual Meeting",
-      date: "15 - 18 August 2024",
+      title: "2025 OVERNIGHT PRAYERS",
+      date: "28 FEBRUARY 2025",
       description:
-        "Women annual conference at Chizungu CCAP (Kakonje Presbytery). Join us for a time of spiritual renewal, fellowship, and inspiring sessions tailored for women of faith.",
-      image: "images/slider-1.jpg",
+        "Join us for an Overnight Prayer on 28 February as we seek God's presence, guidance, and breakthrough. Let's come together in worship and intercession, expecting His mighty move. Don't miss it!",
+      image: "images/slider-1.png",
       link: "#",
     },
   ];
@@ -306,9 +314,6 @@ const Families = () => (
             { name: 'Harrison', img: 'images/family-2.jpg' },
             { name: 'Harrison', img: 'images/family-6.jpg' },
             { name: 'Harrison', img: 'images/family-7.jpg' },
-            { name: 'Harrison', img: 'images/family-2.jpg' },
-            { name: 'Harrison', img: 'images/family-1.jpg' },
-            { name: 'Harrison', img: 'images/family-3.jpg' },
           ].map((station) => (
             <figure className="family" key={station.name}>
               <img src={station.img} alt={station.name} />
